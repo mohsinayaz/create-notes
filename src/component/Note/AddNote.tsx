@@ -8,6 +8,8 @@ function AddNote(props: any) {
       text: event.target.text.value,
       link: event.target.link.value,
     };
+    event.target.text.value = "";
+    event.target.link.value = "";
     props.recieveNote(notes);
   }
   return (
